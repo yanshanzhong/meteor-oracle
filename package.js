@@ -27,6 +27,8 @@ Package.onUse(function(api) {
   api.addFiles('lib/server/oracle_driver.js', 'server');
   api.addFiles('lib/server/remote_collection_driver.js', 'server');
   api.addFiles('lib/server/collection.js', ['client', 'server']);
+  api.addFiles('lib/server/oracle_collection.js', 'server');
+  api.addFiles('lib/server/oracle_db.js', 'server');
 });
 
 Package.onTest(function(api) {
