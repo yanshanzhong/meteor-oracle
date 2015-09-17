@@ -16,7 +16,7 @@ Npm.depends({
 
 Package.onUse(function(api) {
   api.export(['NpmModuleOracledb', 'NpmModuleOracledbVersion'], 'server');
-  api.export(['OracleInternals', 'OracleTest'], 'server');
+  api.export(['OracleInternals', 'OracleTest', 'OracleSelector'], 'server');
   api.export(['Oracle'], ['client', 'server']);
   api.versionsFrom('1.1.0.3');
   api.use('underscore');
@@ -29,6 +29,8 @@ Package.onUse(function(api) {
   api.addFiles('lib/server/collection.js', ['client', 'server']);
   api.addFiles('lib/server/oracle_collection.js', 'server');
   api.addFiles('lib/server/oracle_db.js', 'server');
+  api.addFiles('lib/server/oracle_selector.js', 'server');
+  api.addFiles('lib/server/helpers.js', 'server');
 });
 
 Package.onTest(function(api) {
@@ -36,4 +38,5 @@ Package.onTest(function(api) {
   api.use('amisystem:meteor-oracle');
   api.addFiles('lib/server/oracle_tests.js', 'server');
   api.addFiles('lib/server/collection_tests.js', 'server');
+  api.addFiles('lib/server/oracle_selector_tests.js', 'server');
 });
