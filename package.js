@@ -11,7 +11,7 @@ Package.describe({
 });
 
 Npm.depends({
-	'oracledb': '1.1.0'
+	'oracledb': '1.2.0'
 });
 
 Package.onUse(function(api) {
@@ -23,6 +23,7 @@ Package.onUse(function(api) {
   api.use('callback-hook', 'server');
   api.use('mongo', ['client', 'server']);
   api.use('minimongo', 'server');
+  api.use('ejson', 'server');
   api.addFiles('lib/server/wrapper.js', 'server');
   api.addFiles('lib/server/oracle_driver.js', 'server');
   api.addFiles('lib/server/remote_collection_driver.js', 'server');
