@@ -16,7 +16,7 @@ Npm.depends({
 
 Package.onUse(function(api) {
   api.export(['NpmModuleOracledb', 'NpmModuleOracledbVersion'], 'server');
-  api.export(['OracleInternals', 'OracleDB', 'OracleTest', 'OracleSelector'], 'server');
+  api.export(['OracleInternals', 'OracleDB', 'OracleTest', 'OracleSelector', 'OracleModifier'], 'server');
   api.export(['Oracle'], ['client', 'server']);
   api.versionsFrom('1.1.0.3');
   api.use('underscore');
@@ -42,4 +42,5 @@ Package.onTest(function(api) {
   api.addFiles('lib/server/tests/oracle_db_tests.js', 'server');
   api.addFiles('lib/server/tests/collection_tests.js', 'server');
   api.addFiles('lib/server/tests/oracle_selector_tests.js', 'server');
+  api.addFiles('lib/server/tests/oracle_modifier_tests.js', 'server');
 });
