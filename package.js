@@ -16,7 +16,7 @@ Npm.depends({
 
 Package.onUse(function(api) {
   api.export(['NpmModuleOracledb', 'NpmModuleOracledbVersion'], 'server');
-  api.export(['OracleInternals', 'OracleDB', 'OracleTest', 'OracleSelector', 'OracleModifier'], 'server');
+  api.export(['OracleInternals', 'OracleDB', 'OracleTest', 'OracleSelector', 'OracleModifier', 'OracleSorter', 'OracleFields'], 'server');
   api.export(['Oracle'], ['client', 'server']);
   api.versionsFrom('1.1.0.3');
   api.use('underscore');
@@ -32,6 +32,8 @@ Package.onUse(function(api) {
   api.addFiles('lib/server/oracle_db.js', 'server');
   api.addFiles('lib/server/oracle_selector.js', 'server');
   api.addFiles('lib/server/oracle_modifier.js', 'server');
+  api.addFiles('lib/server/oracle_sorter.js', 'server');
+  api.addFiles('lib/server/oracle_fields.js', 'server');
   api.addFiles('lib/server/helpers.js', 'server');
 });
 
@@ -43,4 +45,6 @@ Package.onTest(function(api) {
   api.addFiles('lib/server/tests/collection_tests.js', 'server');
   api.addFiles('lib/server/tests/oracle_selector_tests.js', 'server');
   api.addFiles('lib/server/tests/oracle_modifier_tests.js', 'server');
+  api.addFiles('lib/server/tests/oracle_sorter_tests.js', 'server');
+  api.addFiles('lib/server/tests/oracle_fields_tests.js', 'server');
 });
