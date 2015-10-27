@@ -31,6 +31,7 @@ Package.onUse(function(api) {
   api.addFiles('lib/server/oracle_collection.js', 'server');
   api.addFiles('lib/server/oracle_db.js', 'server');
   api.addFiles('lib/server/oracle_selector.js', 'server');
+  api.addFiles('lib/server/oracle_modifier.js', 'server');
   api.addFiles('lib/server/helpers.js', 'server');
 });
 
