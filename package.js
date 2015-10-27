@@ -1,6 +1,6 @@
 Package.describe({
-  name: 'amisystem:meteor-oracle',
-  version: '0.0.1',
+  name: 'metstrike:meteor-oracle',
+  version: '0.1.0',
   // Brief, one-line summary of the package.
   summary: 'Oracle Database Driver for Meteor',
   // URL to the Git repository containing the source code for this package.
@@ -11,7 +11,7 @@ Package.describe({
 });
 
 Npm.depends({
-	'oracledb': '1.2.0'
+	'oracledb': '1.3.0'
 });
 
 Package.onUse(function(api) {
@@ -39,7 +39,7 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('amisystem:meteor-oracle');
+  api.use('metstrike:meteor-oracle');
   api.addFiles('lib/server/tests/oracle_tests.js', 'server');
   api.addFiles('lib/server/tests/oracle_db_tests.js', 'server');
   api.addFiles('lib/server/tests/collection_tests.js', 'server');

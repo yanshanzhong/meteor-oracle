@@ -1,12 +1,29 @@
 # meteor-oracle
 
-Connects meteor to Oracle database through Collections.
+This package allows thousands of enterprises to build and deploy Meteor applications that access their data stored in Oracle databases.
 
-### Installation
+```javascript
+var coll = new Oracle.Collection("todos");
 
-Run the following from a command line.
+coll.insert();
+var rows = coll.find({}, {}).fetch();
+```
 
-    meteor add amisystem:meteor-oracle
+### Package Installation
+
+Follow the installation steps listed for node.js package "oracledb".
+
+* Install the small, free Oracle Instant Client libraries if your database is remote. Or use a locally installed database such as the free Oracle XE release.
+* Run npm install oracledb to install from the NPM registry.
+* Set environment variable LD_LIBRARY_PATH accordingly, e.g.:
+** export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:~/workspace/instantclient_11_2
+* See https://github.com/oracle/node-oracledb for more information about node.js package "node-oracledb"
+* See https://github.com/oracle/node-oracledb/blob/master/INSTALL.md for detailed installation steps
+
+
+Add meteor-oracle package to your meteor application.
+
+    meteor add metstrike:meteor-oracle
 
 ### License
 
