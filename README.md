@@ -25,6 +25,21 @@ Add meteor-oracle package to your meteor application.
 
     meteor add metstrike:meteor-oracle
 
+
+### Convert TODO Example Application to Oracle
+
+* Install TODO Example Application
+$ cd ~/workspace
+$ meteor create --example todos
+$ cd todos
+* Add meteor-oracle package
+$ meteor add metstrike:meteor-oracle
+* Initialize oracle demo account: meteor
+$ sqlplus system@XE
+SQL> create user meteor identified by meteor;
+SQL> exit
+
+
 ### License
 
 Released under the MIT license. See the LICENSE file for more info.
