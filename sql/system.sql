@@ -7,5 +7,7 @@ connect system/&&system_password@&&SID
 
 create user meteor identified by meteor;
 
+grant connect, resource to meteor;
+
 exit
 
