@@ -40,6 +40,13 @@ SQL> create user meteor identified by meteor;
 SQL> exit
 
 
+### TODOs
+
+// TODO: fix ensure index
+// TODO: refresh table meta-data after error occurred (maybe separate ORA errors should be considered)
+// TODO: support strict mode (no DDL changes in the database)
+
+
 ### License
 
 Released under the MIT license. See the LICENSE file for more info.
