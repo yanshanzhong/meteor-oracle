@@ -4,8 +4,8 @@ drop sequence "oplog_seq";
 create table "oplog"
 (
 "_id" varchar2(17) not null,
-"ts" timestamp not null,
-"v" number not null,
+"ts" number not null,
+"v" number(1) not null,
 "op" varchar2(10) not null,
 "ns" varchar2(100) not null,
 "o" varchar2(4000) not null,
